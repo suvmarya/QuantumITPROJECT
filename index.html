@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <title>The Meat House</title>
+    <link rel="stylesheet" href="/css/style.css">
+
+</head>
+
+<body>
+    <div class="heading">
+        <div class="upperheading">
+            <div class="leftupperheading">
+                <a href="">Why The Meat Empire ?</a>
+
+            </div>
+            <div class="rigtupperheading">
+                <i class="fa fa-phone" style="font-size:24px">1800-2600-5858 |</i>
+                <i class="fa fa-envelope" style="font-size:24px"> themeathouse@gmail.com |</i>
+                <a href=""> My Account / Login |</a>
+                <i class="fa fa-share-alt" style="font-size:24px"></i>
+                <i class="fa fa-whatsapp" style="font-size:24px"></i>
+                <i class="fa fa-instagram" style="font-size:24px"></i>
+
+            </div>
+
+        </div>
+        <div class="midheading">
+            <img src="/img/logo.png" alt="logo">
+            <i class="fa fa-map-marker" style="font-size:24px"> Area Location </i>
+            <form action="/">
+                <input type="search" id="gsearch" name="gsearch" placeholder="Search for any delicious product "
+                    Style="width:350px;height:35px">
+            </form>
+            <div class="cart">
+                <i class="fa fa-heart" style="font-size:24px; padding: 0px 50px;"></i>
+                <i class="fa fa-shopping-cart" style="font-size:24px"></i>
+            </div>
+
+
+        </div>
+        <div class="lowerheading">
+            <nav id="navbar">
+                <ul>
+                    <li><a href="#"> <span> <img src="/img/chicken 1 logo.png" alt="" style="width: 65px;height: 59px;">
+                            </span> CHICKEN</a></li>
+                    <li><a href="#"> <span> <img src="/img/mutton1 logo.png" alt="" style="width: 65px;height: 59px;">
+                            </span> MUTTON</a></li>
+                    <li><a href="#"> <span> <img src="/img/fish1 logo.png" alt="" style="width: 65px;height: 59px;">
+                            </span> FISH & PRAWNS</a></li>
+                    <li><a href="#"> <span> <img src="/img/heat1logo.png" alt="" style="width: 65px;height: 59px;">
+                            </span> HEAT & EAT</a></li>
+                    <li><a href="#"> <span> <img src="/img/fitnesss logo.jpg" alt="" style="width: 65px;height: 59px;">
+                            </span> FITNESS FOOD</a></li>
+                    <li><a href="#"> <span> <img src="/img/coldcuts logo.png" alt="" style="width: 65px;height: 59px;">
+                            </span> COLD CUTS</a></li>
+                    <li><a href="#"> <span> <img src="/img/curries.png" alt="" style="width: 65px;height: 59px;">
+                            </span> CURRIES</a></li>
+                    <li><a href="#"> <span> <img src="/img/marinades.png" alt="" style="width: 65px;height: 59px;">
+                            </span> MARINADES</a></li>
+                    <li><a href="#"> <span> <img src="/img/co-brand logo.png" alt="" style="width: 65px;height: 59px;">
+                            </span> CO-BRANDS</a></li>
+                    <li><a href="#"> <span> <img src="/img/sides logo.png" alt="" style="width: 65px;height: 59px;">
+                            </span> JUICES </a></li>
+                </ul>
+            </nav>
+
+        </div>
+    </div>
+    <section>
+        <!-- Slideshow container -->
+
+        <div class="slideshow-container">
+
+            <!-- Full-width images with number and caption text -->
+            <div class="mySlides fade">
+
+                <img src="/img/bg10.jpg" style="width:1348px; height: 400px;">
+                <div class="text-1"><p>Healthy & Safety</p></div>
+                <div class="text"><p>Mutton, Chicken & Sea food</p></div>
+            </div>
+
+            <div class="mySlides fade">
+
+                <img src="/img/bg20.jpg" style="width:1348px; height: 400px;">
+                <div class="text-1"><p>Hygienic & Home Made Ingredients</p></div>
+                
+
+            </div>
+
+            <div class="mySlides fade">
+
+                <img src="/img/bg30.jpg" style="width:1348px; height: 400px;">
+               
+
+            </div>
+
+            <!-- Next and previous buttons -->
+            <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+            <a class="next" onclick="plusSlides(1)">&#10095;</a>
+        </div>
+        <br>
+
+        <!-- The dots/circles -->
+        <div style="text-align:center">
+            <span class="dot" onclick="currentSlide(1)"></span>
+            <span class="dot" onclick="currentSlide(2)"></span>
+            <span class="dot" onclick="currentSlide(3)"></span>
+        </div>
+    </section>
+
+    <footer>
+        <div class="footer">
+            <p>&#169; 2020 | www.onlinemeat.com | </p>
+        </div>
+    </footer>
+
+    <script>
+        var slideIndex = 1;
+        showSlides(slideIndex);
+
+        // Next/previous controls
+        function plusSlides(n) {
+            showSlides(slideIndex += n);
+        }
+
+        // Thumbnail image controls
+        function currentSlide(n) {
+            showSlides(slideIndex = n);
+        }
+
+        function showSlides(n) {
+            var i;
+            var slides = document.getElementsByClassName("mySlides");
+            var dots = document.getElementsByClassName("dot");
+            if (n > slides.length) { slideIndex = 1 }
+            if (n < 1) { slideIndex = slides.length }
+            for (i = 0; i < slides.length; i++) {
+                slides[i].style.display = "none";
+            }
+            for (i = 0; i < dots.length; i++) {
+                dots[i].className = dots[i].className.replace(" active", "");
+            }
+            slides[slideIndex - 1].style.display = "block";
+            dots[slideIndex - 1].className += " active";
+        }
+    </script>
+
+</body>
+
+
+
+</html>
